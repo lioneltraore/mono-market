@@ -1,4 +1,4 @@
-import { Component, inject } from '@angular/core';
+import { Component, inject, OnInit } from '@angular/core';
 import { NavigationEnd, Event, Router, RouterModule } from '@angular/router';
 import { MainNavComponent } from './main-nav/main-nav.component';
 import { IStaticMethods } from 'preline/preline';
@@ -17,7 +17,7 @@ declare global {
   templateUrl: './app.component.html',
   styleUrl: './app.component.scss',
 })
-export class AppComponent {
+export class AppComponent implements OnInit {
   title = 'shop';
   router = inject(Router);
 
