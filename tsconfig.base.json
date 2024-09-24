@@ -15,7 +15,7 @@
     "skipDefaultLibCheck": true,
     "baseUrl": ".",
     "paths": {
-      "@mono-market/home": ["libs/src/index.ts"]
+      // "@mono-market/home": ["libs/src/index.ts"]
     }
   },
   "exclude": ["node_modules", "tmp"]
