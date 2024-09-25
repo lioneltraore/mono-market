@@ -10,7 +10,9 @@
       "executor": "@nx/angular:ng-packagr-lite",
       "outputs": ["{workspaceRoot}/dist/{projectRoot}"],
       "options": {
-        "project": "libs/home/ng-package.json"
+        "project": "libs/home/ng-package.json",
+        "tailwindConfig": "libs/home/tailwind.config.js",
+        "scripts": ["node_modules/preline/preline.js"]
       },
       "configurations": {
         "production": {

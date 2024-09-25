@@ -8,7 +8,7 @@ module.exports = {
   content: [
     join(__dirname, 'src/**/!(*.stories|*.spec).{ts,html}'),
     ...createGlobPatternsForDependencies(__dirname),
-    join(__dirname,'../../node_modules/preline/preline.js'),
+    '../../node_modules/preline/preline.js',
   ],
   theme: {
     extend: {},
