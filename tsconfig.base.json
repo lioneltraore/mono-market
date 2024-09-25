@@ -15,6 +15,7 @@
     "skipDefaultLibCheck": true,
     "baseUrl": ".",
     "paths": {
+      "@mono-market/category": ["libs/category/src/index.ts"],
       "@mono-market/home": ["libs/home/src/index.ts"]
     }
   },
