@@ -1,1 +1,1 @@
-export * from './lib/category/category.component';
+export * from './lib/category.service';

@@ -2,6 +2,7 @@ import { Component, inject, OnInit } from '@angular/core';
 import { NavigationEnd, Event, Router, RouterModule } from '@angular/router';
 import { MainNavComponent } from './main-nav/main-nav.component';
 import { IStaticMethods } from 'preline/preline';
+import { CommonModule } from '@angular/common';
 
 
 declare global {
@@ -12,7 +13,7 @@ declare global {
 
 @Component({
   standalone: true,
-  imports: [RouterModule, MainNavComponent],
+  imports: [RouterModule, CommonModule, MainNavComponent],
   selector: 'app-root',
   templateUrl: './app.component.html',
   styleUrl: './app.component.scss',
