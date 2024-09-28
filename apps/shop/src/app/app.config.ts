@@ -1,3 +1,4 @@
+import { CategoryEffects, categoryReducer } from '@mono-market/category';
 import { ApplicationConfig, provideZoneChangeDetection } from '@angular/core';
 import { provideRouter } from '@angular/router';
 import { appRoutes } from './app.routes';
@@ -10,7 +11,9 @@ export const appConfig: ApplicationConfig = {
     provideZoneChangeDetection({ eventCoalescing: true }),
     provideRouter(appRoutes),
     provideHttpClient(),
-    provideStore(),
-    provideEffects([])
+    provideStore({
+      reducers: categoryReducer
+    }),
+    provideEffects([CategoryEffects])
   ],
 };
