@@ -3,6 +3,8 @@ import { NavigationEnd, Event, Router, RouterModule } from '@angular/router';
 import { MainNavComponent } from './main-nav/main-nav.component';
 import { IStaticMethods } from 'preline/preline';
 import { CommonModule } from '@angular/common';
+import { Store } from '@ngrx/store';
+import { CategorySelectors } from '@mono-market/category';
 
 
 declare global {
@@ -21,6 +23,9 @@ declare global {
 export class AppComponent implements OnInit {
   title = 'shop';
   router = inject(Router);
+  store = inject(Store);
+
+  categories$ = this.store.select(CategorySelectors.selectCategories);
 
   ngOnInit() {
     this.router.events.subscribe((event: Event) => {

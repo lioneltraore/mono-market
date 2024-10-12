@@ -1,5 +1,5 @@
 import { inject, Injectable } from '@angular/core';
-import * as CategoryActions from './category.action';
+import { CategoryActions } from '../index';
 import { Actions, createEffect, ofType } from '@ngrx/effects';
 import { CategoryService } from './category.service';
 import { catchError, EMPTY, exhaustMap, map } from 'rxjs';
